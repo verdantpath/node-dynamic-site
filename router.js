@@ -1,5 +1,5 @@
-//2. Handle HTTP route GET / and POST / i.e. Home
-function homeRoute(request, response) {
+// Handle HTTP route GET / and POST / i.e. Home
+function home(request, response) {
   //if url == "/" && GET
   if(request.url == "/") {
     //show search
@@ -11,8 +11,8 @@ function homeRoute(request, response) {
   //if url == "/" && POST
     //redirect to /:username
 }
-//3. Handle HTTP route GET /:username i.e. /chalkers
-function userRoute(request, response) {
+// Handle HTTP route GET /:username i.e. /chalkers
+function user(request, response) {
   //if url == "/...."
   var username = request.url.replace("/", "");
   if(username.length > 0) {
@@ -27,3 +27,6 @@ function userRoute(request, response) {
         //show error
   }
 }
+
+module.exports.home = home;
+module.exports.user = user;
